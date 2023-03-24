@@ -87,7 +87,7 @@ h3{
     display: none;
     opacity: 0;
     width: 400px;
-    height: 200px;
+    height: 400px;
     background-color: rgb(255, 255, 255);
     position: fixed;
     top: 50%;
@@ -98,7 +98,7 @@ h3{
 }
 
 .modal input {
-    padding: 10px 10px 10px 5px;
+   
     border: 2px solid #0071E3;
     border-radius: 5px;
 }
@@ -108,20 +108,36 @@ h3{
     background-color: #0071E3;
     color: white;
     border: none;
-    padding: 12px;
+    width: 200px;
+    height: 50px;
+    margin: 20px auto;
 }
 
 
 .flex {
     width: 70%;
-    margin: 50px auto;
+    margin: 0px auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
+}
+.flex2 {
+    width: 70%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
 }
 
 .title {
-    margin: 30px 0px 0px 100px;
+    margin: 20px 0px ;
+    text-align: center;
+}
+.title2 {
+    margin: 20px 0px ;
+    text-align: center;
 }
 .invalid input {
     border-color: red !important;

@@ -4,8 +4,10 @@ let Inps = document.querySelectorAll('.required')
 let modal = document.querySelector('.modal')
 let modalBg = document.querySelector('.modalBg')
 let btnEdit = document.querySelector('.btn')
-let modalInp = document.querySelector('.modal input')
+let modalInp = document.querySelector('.flex input')
+let modalInp2 = document.querySelector('.flex2 input')
 let title = document.querySelector('.title')
+let titl2 = document.querySelector(".title2")
 let edID 
 
 
@@ -37,9 +39,10 @@ form.onsubmit = (e) => {
 
 function submit(){
     let user = {
-        id: Math.random()
+        id: Math.random(),
+    
     }
-   
+  
     let fm = new FormData(form)
 
     fm.forEach((value, key) => {
@@ -68,12 +71,11 @@ function reload(arr) {
         let edit = document.createElement("span")
         let dlt = document.createElement("span")
         
-        
+        num = count++
         thing.classList.add("item") 
         divn.classList.add("number")
         divnam.classList.add("name")
         diva.classList.add("age")
-        num = count++
         name.innerHTML = item.name
         age.innerHTML = item.age
         btn.classList.add("btns")
@@ -108,6 +110,7 @@ reload(table)
 
 function openModal(item) {
     title.innerHTML = item.name
+    titl2.innerHTML = item.age
     modal.style.display = 'block'
     modalBg.style.display = 'block'
     setTimeout(() => {
@@ -131,7 +134,10 @@ btnEdit.onclick = () => {
     let newnAME = modalInp.value
     let finded = table.find(item => item.id === edID)
 
+  
+
     finded.name = newnAME
+    
     reload(table)
     closeModal()
 }
